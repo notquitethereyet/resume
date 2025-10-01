@@ -1,4 +1,4 @@
-NAME=cv
+NAME=resume
 
 all:
 	latexmk -pdf ${NAME}.tex
