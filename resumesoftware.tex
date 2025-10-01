@@ -1,0 +1,118 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+\usepackage{amssymb}
+\moderncvstyle{banking}
+\moderncvcolor{black}
+\nopagenumbers{}
+\usepackage[utf8]{inputenc}
+\usepackage{ragged2e}
+\usepackage[scale=0.915]{geometry}
+\usepackage{import}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{xcolor}
+
+\newcommand*{\customcventry}[7][.13em]{
+\begin{tabular}{@{}l}
+{\bfseries #4} \\
+{\itshape #3}
+\end{tabular}
+\hfill
+\begin{tabular}{l@{}}
+{\bfseries #5} \\
+{\itshape #2}
+\end{tabular}
+\ifx&#7&%
+\else{%
+\begin{minipage}{\maincolumnwidth}%
+\small#7%
+\end{minipage}}\fi%
+\par\addvspace{#1}}
+
+\name{\textcolor{black}{Arnav}}{\textcolor{black}{Panigrahi}}
+
+\begin{document}
+\makecvtitle
+\vspace{-12mm} % Use a smaller negative value to prevent overlap
+\begin{center}
+\small
+\raisebox{-0.1\height}\faPhone\ +1 951-347-2065 ~
+\href{mailto:arnav.panigrahi@gmail.com}{\faEnvelope\ arnav.panigrahi@gmail.com} ~
+\faHome\enspace Riverside, US ~ \\
+\href{https://linkedin.com/in/arnav-panigrahi}{\faLinkedin\ Arnav Panigrahi} ~
+\href{https://github.com/notquitethereyet}{\faGithub\ notquitethereyet} ~
+\href{https://arnavpanigrahi.com}{\faGlobe\ arnavpanigrahi.com} % added website
+\vspace{-8pt}
+\end{center}
+
+\section{Professional Summary}
+Software Engineer with a Master's in Computer Science and 2+ years of experience building scalable, AI-powered full-stack applications. Proficient across a diverse tech stack including Python (FastAPI), JavaScript (React, Node.js). Experienced in the software development lifecycle and deploying cloud-native backends on GCP.
+
+
+
+\section{Experience}
+
+\customcventry{Mar 2025 – Present}{Software Developer (Full-time)}{AllCheer (Fateh and Sudha Inc), San Francisco, CA}{}{}{
+\begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+\item Engineered a fully automated Release of Information (ROI) system using a \textbf{LangChain AI agent} to orchestrate document generation, e-signature collection, and secure data sharing, saving \textbf{\$20K/year} and \textbf{reducing processing time by 60\%}.
+\item Deployed a HIPAA compliant production-grade \textbf{FastAPI backend} to ingest real-time data from Rethink BH, building out an observability stack on \textbf{Google Cloud Run} that \textbf{cut costs by 90\%} and eliminated 24-48h latency.
+\item Developed an internal dashboard integrating a GPT-based NLP API for \textbf{named-entity recognition (NER)} and text summarization to structure unformatted therapist notes, improving \textbf{data accuracy to 92\%}.
+\end{itemize}
+}
+\vspace{0.3cm}
+
+\customcventry{Jun 2024 – Dec 2024}{Software Developer Intern}{AllCheer (Fateh and Sudha Inc), San Francisco, CA}{}{}{
+\begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+\item Built a distance matrix generation system to schedule trips for the staff using \textbf{Google Route / Distance Matrix API}.
+\item Prototype the ROI automation using (\textbf{Make.com}) and validate workflows with legal/operations teams.
+\end{itemize}
+}
+\vspace{0.3cm}
+\customcventry{Jan 2022 -- Aug 2023}{Junior Software Developer}{Pinnacle Consulting LLC (PCON Utilities Pvt Ltd), Bhubaneswar, India}{}{}{
+\begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+\item Integrated \textbf{ArcGIS} mapping with REST APIs and SQL Server for a \$75M utility provider in North Carolina to visualize infrastructure and sync real-time updates from \textbf{mobile field apps}, reducing oversight errors by \textbf{30\%}.
+\item Delivered \textbf{3 ERP systems} using \textbf{Angular} and \textbf{Node.js} for internal teams to manage \textbf{timesheets}, \textbf{communication}, and \textbf{KPI reporting}; implemented \textbf{JWT authentication}, automated invoicing, and messaging, improving operational efficiency by \textbf{25\%}.
+\end{itemize}
+}
+\section{Technical Skills}
+
+
+\begin{itemize}[label={\textbullet}]
+
+
+\item \textbf{Programming Languages:} Python, JavaScript, TypeScript
+\vspace{-2mm}
+\item \textbf{Frontend:} React, Angular, Next.JS, Tailwind CSS, HTML/CSS
+\vspace{-2mm}
+\item \textbf{Backend:} FastAPI, Node.js, Flask, RESTful APIs
+\vspace{-2mm}
+\item \textbf{Databases:} PostgreSQL, MongoDB, Redis, Pinecone, SQL
+\vspace{-2mm}
+\item \textbf{Cloud \& DevOps:} AWS, GCP, Docker, Kubernetes, Google Cloud Run
+\vspace{-2mm}
+% \item \textbf{AI \& Machine Learning:} LangChain, LangGraph, PyTorch, RAG, LLMs, NLP, scikit-learn
+
+\end{itemize}
+
+
+\section{Projects}
+\begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+    \item \textbf{bedtime.ai – Multi-Modal AI Storytelling Platform} \\
+    An AI system that turns children’s drawings into bedtime stories narrated in parents’ voices using a fine-tuned \textbf{phi-3 LLM}, \textbf{EfficientNet}, and \textbf{coqui-ai}. 
+    % Deployed with \textbf{FastAPI}, \textbf{React/Vite}, and \textbf{Docker}.
+        
+    \item \textbf{Agentic Job Tracker \& Helper} \\
+    A stateful AI agent using \textbf{LangGraph} and \textbf{GPT-4o} to automate job applications, with \textbf{NLP-driven resume tailoring} and chat-based tracking via \textbf{FastAPI} + \textbf{Supabase}.
+    
+    \item \textbf{RAG for Document Intelligence} \\
+    Semantic search over PDFs with \textbf{Pinecone} and \textbf{Groq}, achieving \textbf{35\% higher relevance} and sub-second responses.
+
+\end{itemize}
+
+
+
+\section{Education}
+\customcventry{2023 - 2025}{Master of Science in Computer Science}{University of California, Riverside}{}{}{GPA: 3.61}
+
+
+\end{document}

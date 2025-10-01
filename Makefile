@@ -1,10 +1,16 @@
-NAME=cv
+ML_CV=resumeml
+SOFTWARE_CV=resumesoftware
 
-all:
-	latexmk -pdf ${NAME}.tex
+all: ${ML_CV}.pdf ${SOFTWARE_CV}.pdf
+
+${ML_CV}.pdf:
+	latexmk -pdf ${ML_CV}.tex
+
+${SOFTWARE_CV}.pdf:
+	latexmk -pdf ${SOFTWARE_CV}.tex
 
 clean:
-	rm -f ${NAME}.aux ${NAME}.bbl ${NAME}.bcf ${NAME}.fdb_latexmk ${NAME}.fls ${NAME}.log ${NAME}.out ${NAME}.run.xml ${NAME}.blg ${NAME}.toc *\~
+	rm -f *.aux *.bbl *.bcf *.fdb_latexmk *.fls *.log *.out *.run.xml *.blg *.toc *\~
 
 distclean: clean
-	rm -f ${NAME}.pdf
+	rm -f *.pdf
